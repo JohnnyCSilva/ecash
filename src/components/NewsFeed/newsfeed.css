@@ -8,6 +8,16 @@
     margin: 0;
     font-family: var(--font);
 }
-.linegraph{
-    color: white;
+
+.newsfeed__portfolioValue{
+    padding: 15px 25px;
 }
+
+.newsfeed__portfolioValue>p{
+    color: #39e75f;
+    font-size: 15px;
+}
+.newsfeed__portfolioValue>p>span{
+    font-size: 12px;
+}
+

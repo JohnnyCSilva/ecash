@@ -31,7 +31,7 @@ const Newsfeed = () => {
           <div className='newsfeed__chartSection'>
             <div className='newsfeed__portfolioValue'>
               <h1> 139.324,53</h1>
-              <p>+ 144,56€ (+0,04%)</p>
+              <p>+ 144,56€ <span>(+0,04%)</span></p>
             </div>
             <div className='newsfeed__chart'>
             <Graph chartData={userData} />

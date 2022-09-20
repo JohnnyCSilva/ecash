@@ -20,7 +20,7 @@
 }
 .logo{
     vertical-align: middle;
-    width: 40vmin;
+    width: 150px;
 }
 .header__search{
     background-color: var(--backgroundDark);
