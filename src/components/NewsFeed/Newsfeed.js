@@ -13,15 +13,14 @@ const Newsfeed = () => {
       {
         label: "Users Gained",
         data: UserData.map((data) => data.userGain),
-        backgroundColor: [
-          "rgba(75,192,192,1)",
-          "#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "var(--mainColor)",
-        ],
-        borderColor: "#6366f1",
-        borderWidth: 2,
+        pointHoverRadius: 6,
+          borderHoverBorderWidth:4,
+          pointHoverBackgroundColor: '#6366f1',
+          pointBackgroundColor: '#6366f1',
+          pointBorderColor: '#6366f1',
+          borderWidth: 2,
+          borderColor: '#6366f1',
+          backgroundColor: 'transparent',
       },
     ],
   });
