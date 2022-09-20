@@ -5,10 +5,12 @@ import Logo from '../../logoMain.svg'
 
 function mobileMenuOpen(){
   document.getElementById("mobile_menu").style.width = "100%";
+  document.getElementById("newsfeed_chart").style.display = "none";
 }
 
 function mobileMenuClose(){
   document.getElementById("mobile_menu").style.width = "0px";
+  document.getElementById("newsfeed_chart").style.display = "block";
 }
 
 function expandForm(){
@@ -37,24 +39,24 @@ function Header() {
           </div>
         </div>
         <div className='header__toggler'>
-        <a onClick={mobileMenuOpen}> <p>Menu</p> <i className='pi pi-bars'></i></a>
+          <b onClick={mobileMenuOpen}> <p>Menu</p> <i className='pi pi-bars'></i></b>
         </div>
         <div className='header__menu'>
-          <a href='#'>Portfolio</a>
-          <a href='#'>Stocks</a>
-          <a href='#'>Crypto</a>
-          <a href='#'>Messages</a>
-          <a href='#'>Account</a>
+          <a href='www.google.pt'>Portfolio</a>
+          <a href='www.google.pt'>Stocks</a>
+          <a href='www.google.pt'>Crypto</a>
+          <a href='www.google.pt'>Messages</a>
+          <a href='www.google.pt'>Account</a>
         </div>
       </div>
       <div className='mobile__menu' id="mobile_menu">
         <i className="pi pi-times" id="close_mobile_menu" onClick={mobileMenuClose}></i>
         <ul className='mobile__menuContainer'>
-          <li><a href='#'>Portfolio</a></li>
-          <li><a href='#'>Stocks</a></li>
-          <li><a href='#'>Crypto</a></li>
-          <li><a href='#'>Messages</a></li>
-          <li><a href='#'>Account</a></li>
+          <li><a href='www.google.pt'>Portfolio</a></li>
+          <li><a href='www.google.pt'>Stocks</a></li>
+          <li><a href='www.google.pt'>Crypto</a></li>
+          <li><a href='www.google.pt'>Messages</a></li>
+          <li><a href='www.google.pt'>Account</a></li>
           <li>
             <div className='search__containerMenu'>
               <div className='search__midContainer' onClick={expandForm} id="search_containerMenu">

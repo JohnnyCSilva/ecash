@@ -9,17 +9,21 @@
   --textWhiter : #fff;
   --textBeforeFocus: #707070;
 
+  --backgroundHover: #252525;
   --backgroundDark: #151515;
 
   --font : 'Poppins', sans- serif;
 
 }
 
+*{
+  margin:0;
+  padding: 0;
+}
+
 body{
   background-color: var(--mainBgColor);
 }
-
-
 .header{
   position: fixed;
   width: 100%;
@@ -32,13 +36,12 @@ body{
   display: flex;
   justify-content: center;
 }
-
 .body__container{
   width: 90%;
   display: flex;
   justify-content: center;
   height: 600px;
-  padding-top: 120px;
+  margin-top: 150px;
 }
 
 @media screen and (max-width: 1024px) {

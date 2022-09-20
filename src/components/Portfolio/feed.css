@@ -1,6 +1,5 @@
 .newsfeed{
     flex: 0.7;
-    border: 1px solid orange;
     color: var(--textWhiter)
 }
 
@@ -13,6 +12,13 @@
     padding: 15px 25px;
 }
 
+.newsfeed__portfolioValue>h1{
+letter-spacing: 1px;
+}
+.newsfeed__portfolioValue>h1>sup{
+    font-weight: 300;
+    font-size: 20px;
+}
 .newsfeed__portfolioValue>p{
     color: #39e75f;
     font-size: 15px;
@@ -20,4 +26,6 @@
 .newsfeed__portfolioValue>p>span{
     font-size: 12px;
 }
-
+.newsfeed__chart{
+    margin: 15px 25px;
+}
