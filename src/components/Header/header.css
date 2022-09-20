@@ -3,6 +3,8 @@
     width: 100%;
     align-items: center;
     height: 100px;
+    z-index: 10;
+    background-color: var(--mainBgColor);
 }
 .header__container{
     margin: auto;
@@ -18,10 +20,10 @@
 }
 .logo{
     vertical-align: middle;
-    width: 175px;
+    width: 40vmin;
 }
 .header__search{
-    background-color: #101010;
+    background-color: var(--backgroundDark);
     margin: 0 3%;
     flex: 1;
     display: flex;
@@ -46,7 +48,7 @@
     font-size: 15px;
     outline: none;
     color: var(--textBeforeFocus);
-    letter-spacing: 0.5px;
+    font-family: var(--font);
 }
 .search__container>input::placeholder{
     color: var(--textBeforeFocus);
@@ -99,7 +101,7 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
@@ -147,7 +149,6 @@
     text-shadow: 0px 0px 10px var(--mainColor);
     color: var(--mainColor);
 }
-
 .search__containerMenu{
     min-width: 200px;
     margin-top: 10px;
@@ -181,9 +182,9 @@
     background-color: transparent;
     outline: none;
     color: var(--textBeforeFocus);
-    letter-spacing: 0.5px;
     font-size: 20px;
     transition: 0.2s ease-in-out;
+    font-family: var(--font);
 }
 .search__midContainer>input::placeholder{
     color: var(--textBeforeFocus);
@@ -195,7 +196,6 @@
 input[type="text" i]{
     padding: 0;
 }
-
 @media screen and (max-width: 1024px) {
     .header__container{
         width: 100%;

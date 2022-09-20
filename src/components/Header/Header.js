@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 
-import Logo from '../logoMain.svg'
+import Logo from '../../logoMain.svg'
 
 function mobileMenuOpen(){
   document.getElementById("mobile_menu").style.width = "100%";

@@ -1,0 +1,13 @@
+.newsfeed{
+    flex: 0.7;
+    border: 1px solid orange;
+    color: var(--textWhiter)
+}
+
+.newsfeed__portfolioValue>h1, .newsfeed__portfolioValue>p{
+    margin: 0;
+    font-family: var(--font);
+}
+.linegraph{
+    color: white;
+}

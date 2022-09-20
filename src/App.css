@@ -6,9 +6,10 @@
   --mainBgColor: #070707;
 
   --textWhite : #c1c1c1;
-  --textBeforeFocus: #404040;
+  --textWhiter : #fff;
+  --textBeforeFocus: #707070;
 
-  --backgroundDark: #101010;
+  --backgroundDark: #151515;
 
   --font : 'Poppins', sans- serif;
 
@@ -16,4 +17,32 @@
 
 body{
   background-color: var(--mainBgColor);
+}
+
+
+.header{
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  height: 100px;
+}
+.app__body{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.body__container{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  padding-top: 120px;
+}
+
+@media screen and (max-width: 1024px) {
+  .body__container{
+    width: 100%;
+  }
 }
