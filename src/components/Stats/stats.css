@@ -31,7 +31,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.stats__row{
+#stats_row{
     transition: 0.2s ease-in-out;
 }
 

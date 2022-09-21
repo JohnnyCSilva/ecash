@@ -8,23 +8,6 @@ const Feed = () => {
 
   const [ graphData, setgraphData ] = useState([])
 
-  /*const data = [{
-    Value: '135351',
-    Time: 'Day 16'
-  },{
-    Value: '133516',
-    Time: 'Day 17'
-  },{
-    Value: '146204',
-    Time: 'Day 18'
-  },{
-    Value: '150256',
-    Time: 'Day 19'
-  },{
-    Value: '139324',
-    Time: 'Day 20'
-  }];*/
-
   const createMockData = () => {
     let data = [];
     let value = 50;
@@ -35,7 +18,6 @@ const Feed = () => {
       value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 50);
       data.push({ x: date.toLocaleDateString(), y: value });
     }
-    //console.log(data);
     setgraphData(data);
   };
 
@@ -64,6 +46,8 @@ const Feed = () => {
                 />
               </LineChart>
               </ResponsiveContainer>
+
+              <TimeLine />
 
             </div>
           </div>

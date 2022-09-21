@@ -5,9 +5,6 @@ import Header from "./components/Header/Header.js";
 import Feed from "./components/Portfolio/Feed.js";
 import Stats from './components/Stats/Stats';
 
-<script src="/jquery-3.3.1.min.js"></script>
-
-
 function App() {
   return (
     <div className="App">

@@ -32,6 +32,13 @@ function StatsRow(props) {
   } else {
     chartImage = chartImageNeg;
   }
+
+
+  for (var i = 0; i < props.price.lenght; i++) {
+    var total = 0;
+    total += props.stocks[i];
+    console.log('total: '+ total);
+  }
     
   
   useEffect(() => {
@@ -43,12 +50,10 @@ function StatsRow(props) {
           $(this).addClass('numNeg');
         }
       });
-      for (var i = 0; i < props.price.lenght; i++) {
-        var total = 0;
-        total += props.stocks[i];
-        console.log(total);
-      }    
-    },1000);
+      //console.log((props.price).toFixed(2));
+
+    },2000);
+    
     return () => clearInterval(getColor); 
   },[]);
 
@@ -60,10 +65,10 @@ function StatsRow(props) {
     <div className="row" onClick={getModal}>
       <div className="row__intro">
         <h1>{props?.name}</h1>
-        <p>{/*props.shares && (props.shares + " shares")*/}10 Shares</p>
+        <p>{props.shares && (props.shares + " shares")}</p>
       </div>
       <div className="row__chart">
-      <img src={chartImage} height={18}/>
+      <img src={chartImage} alt="" height={18}/>
       </div>
       <div className="row__numbers">
         <p className="row__price">{(props.price).toFixed(2)} <span>€</span></p>
