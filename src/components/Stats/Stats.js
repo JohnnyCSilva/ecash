@@ -22,6 +22,7 @@ const Stats = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {  
+      var totalStockPrice = 0;
       let tempStockData =[];
       const stocksList = ["AMZN", "PYPL", "ADBE", "AAPL", "BABA", "SHOP"];
 
@@ -41,10 +42,23 @@ const Stats = () => {
       Promise.all(promises).then(()=>{
           setStockData(tempStockData);
       })
+
+      tempStockData.map((stock) =>{
+        totalStockPrice += stock.price;
+      })
+
     },30000)
     return () => clearInterval(intervalId); //This is important
   },[]);
   
+
+  /*var totalStockPrice = 0;
+  var stockPrice = 0;
+  stockData.map((stock) => {
+    stockPrice += stock.price;
+    totalStockPrice += stock.price;
+    sessionStorage.setItem("totalStockPrice", totalStockPrice);
+  });*/
   
 
   function handleHideSection(){
@@ -55,7 +69,7 @@ const Stats = () => {
     <div className='stats'>
       <div className='stats__container'>
         <div className='stats__header'>
-          <p>Crypto Portfolio</p>
+          <p>Crypto Portfolio </p>
           <i className='pi pi-angle-double-down'/>
         </div>
         <div className='stats__content'>

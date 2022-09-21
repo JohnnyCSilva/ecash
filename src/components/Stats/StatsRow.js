@@ -33,6 +33,13 @@ function StatsRow(props) {
     chartImage = chartImageNeg;
   }
     
+  //sum all stock values
+  /*var total = 0;
+  for (var i = 0; i < props.price.lenght; i++) {
+    total += props.stocks[i];
+  }
+  console.log(total);*/
+
   useEffect(() => {
     const getColor = setInterval(() => {  
       $('.row__percentage').each(function() {
