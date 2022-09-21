@@ -10,7 +10,6 @@ const BASE_URL = 'https://finnhub.io/api/v1/quote';
 const Stats = () => {
 
   const [stockData, setStockData] = useState([])
-  var refreshFlag = false;
 
   const getStocksData = (stock) => {
     return axios
@@ -22,34 +21,34 @@ const Stats = () => {
   }
 
   useEffect(() => {
-    let tempStockData =[];
-    const stocksList = ["AMZN", "PYPL", "ADBE", "AAPL", "BABA", "SHOP"];
+    const intervalId = setInterval(() => {  
+      let tempStockData =[];
+      const stocksList = ["AMZN", "PYPL", "ADBE", "AAPL", "BABA", "SHOP"];
 
-    let promises = [];
-    stocksList.map((stock) => {
-      promises.push(
-        getStocksData(stock)
-        .then((res) => {
-          tempStockData.push({
-            name: stock,
-            ...res.data
-          });
-        })
-      )
-    });
-
-    Promise.all(promises).then(()=>{
-        setStockData(tempStockData);
-    })
-  }, setTimeout(() => {
-  refreshFlag = !refreshFlag;
-  }, 20000));
-
+      let promises = [];
+     
+      stocksList.map((stock) => {
+        promises.push(
+          getStocksData(stock)
+          .then((res) => {
+            tempStockData.push({
+              name: stock,
+              ...res.data
+            });
+          })
+        )
+      });
+      Promise.all(promises).then(()=>{
+          setStockData(tempStockData);
+      })
+    },30000)
+    return () => clearInterval(intervalId); //This is important
+  },[]);
   
   
 
   function handleHideSection(){
-    $( "#stats_row" ).toggle();
+    $( "#stats_row" ).slideToggle();
   }
 
   return (
@@ -61,8 +60,8 @@ const Stats = () => {
         </div>
         <div className='stats__content'>
         <div className='stats__row'>
-            
-            </div>
+            {/* Crypto */}
+        </div>
         </div>
         <div className='stats__header'>
           <p>Stocks Portfolio</p>
