@@ -1,38 +1,43 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import chart1up from './images/stock.svg'
 import chart2up from './images/stock2.svg'
+import chart1down from './images/stock3.svg'
+import chart2down from './images/stock4.svg'
 import './stats.css';
+import $ from "jquery";
 
 function StatsRow(props) {
 
 // (currentPrice - openPrice)/openPrice
   const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
-  
-    /*set color green if percentage is above 0
-    let Color = "green";
-    if (Number(percentage).toFixed(2) < 0 < 0) {
-      Color = "red";
-    }*/
 
-    /*select random image from array
-    let randomImage = [];
-    for (let i = 0; i < props.images.length; i++) {
-      randomImage.push(props.images[i]);
-    }*/
+  var chartImage = '';
+
+  useEffect(() => {
+    $('.row__percentage').each(function() {
+      if (parseFloat($(this).text()) < 0) {
+        chartImage = './images/stock3.svg';
+        $(this).addClass('numNeg');
+      } else if (parseFloat($(this).text()) >= 0) {
+        chartImage = './images/stock2.svg';
+        $(this).addClass('numPos');
+      }
+    });
+
+  }, []);
 
   const getModal = () => {
 
   }
+
   return (
     <div className="row" onClick={getModal}>
       <div className="row__intro">
         <h1>{props?.name}</h1>
-        <p>{props.volume && 
-          (props.volume + " shares")
-        }</p>
+        <p>{/*props.volume && (props.volume + " shares")*/}10 Shares</p>
       </div>
       <div className="row__chart">
-        <img src={chart2up} alt="graph" height={20}/>
+      <img src={chartImage} height={20}/>
       </div>
       <div className="row__numbers">
         <p className="row__price">{props.price} <span>€</span></p>

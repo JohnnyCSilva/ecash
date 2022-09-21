@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './stats.css'
 import StatsRow from './StatsRow';
+import $ from "jquery";
 
 const TOKEN = 'ccl2uk2ad3i7ei0c9m5gccl2uk2ad3i7ei0c9m60';
 const BASE_URL = 'https://finnhub.io/api/v1/quote';
@@ -9,6 +10,7 @@ const BASE_URL = 'https://finnhub.io/api/v1/quote';
 const Stats = () => {
 
   const [stockData, setStockData] = useState([])
+  var refreshFlag = false;
 
   const getStocksData = (stock) => {
     return axios
@@ -21,7 +23,7 @@ const Stats = () => {
 
   useEffect(() => {
     let tempStockData =[];
-    const stocksList = ["AAPL", "MSFT", "TSLA", "META", "BABA", "UBER", "DIS", "SBUX"];
+    const stocksList = ["AMZN", "PYPL", "ADBE", "AAPL", "BABA", "SHOP"];
 
     let promises = [];
     stocksList.map((stock) => {
@@ -39,7 +41,16 @@ const Stats = () => {
     Promise.all(promises).then(()=>{
         setStockData(tempStockData);
     })
-  }, []);
+  }, setTimeout(() => {
+  refreshFlag = !refreshFlag;
+  }, 20000));
+
+  
+  
+
+  function handleHideSection(){
+    $( "#stats_row" ).toggle();
+  }
 
   return (
     <div className='stats'>
@@ -55,17 +66,17 @@ const Stats = () => {
         </div>
         <div className='stats__header'>
           <p>Stocks Portfolio</p>
-          <i className='pi pi-angle-double-down'/>
+          <i className='pi pi-angle-double-down' onClick={handleHideSection}/>
         </div>
-        <div className='stats__row'>
-          {stockData.map((stock) => (
-            <StatsRow
-              key={stock.name}
-              name={stock.name}
-              openPrice={stock.o}
-              price={stock.c}
-            />
-          ))}
+        <div className='stats__row' id='stats_row'>
+            {stockData.map((stock) => (
+              <StatsRow
+                key={stock.name}
+                name={stock.name}
+                openPrice={stock.o}
+                price={stock.c}
+              />
+            ))}
         </div>
         
       </div>

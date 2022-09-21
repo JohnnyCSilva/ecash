@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './feed.css';
 
-import { LineChart, Line, Tooltip, XAxis, CartesianGrid } from 'recharts';
+import { LineChart, Line, Tooltip, XAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 
 const Feed = () => {
@@ -53,7 +53,8 @@ const Feed = () => {
             </div>
             <div className='newsfeed__chart' id='newsfeed_chart'>
 
-              <LineChart width={500} height={150} data={graphData}>
+            <ResponsiveContainer width='100%' height={150}>
+              <LineChart data={graphData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
                 <Line type="monotone" dataKey="y" stroke="var(--mainColor)" dot={false} />
                 <CartesianGrid stroke="var(--backgroundDark)" strokeDasharray="5 5" yAxis='1'/>
                 <XAxis dataKey="x" hide="true" />
@@ -62,6 +63,7 @@ const Feed = () => {
                   {color: "black",fontFamily: "var(--font)"}}
                 />
               </LineChart>
+              </ResponsiveContainer>
 
             </div>
           </div>
