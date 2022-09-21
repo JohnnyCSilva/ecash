@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect } from "react";
 import './stats.css';
 import $ from "jquery";
 
@@ -42,7 +42,7 @@ function StatsRow(props) {
           $(this).addClass('numNeg');
         }
       });
-    },30500);
+    },1000);
     return () => clearInterval(getColor); 
   },[]);
 
