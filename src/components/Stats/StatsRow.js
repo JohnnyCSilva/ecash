@@ -19,8 +19,8 @@ function StatsRow(props) {
 // (currentPrice - openPrice)/openPrice
   const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
 
+  
   var chartImage = 0;
-
   var randomImagePos = [stockGreen1, stockGreen2, stockGreen3, stockGreen4, stockGreen5];
   var randomImageNeg = [stockRed1, stockRed2, stockRed3, stockRed4, stockRed5];
 
@@ -33,13 +33,7 @@ function StatsRow(props) {
     chartImage = chartImageNeg;
   }
     
-  //sum all stock values
-  /*var total = 0;
-  for (var i = 0; i < props.price.lenght; i++) {
-    total += props.stocks[i];
-  }
-  console.log(total);*/
-
+  
   useEffect(() => {
     const getColor = setInterval(() => {  
       $('.row__percentage').each(function() {
@@ -49,6 +43,11 @@ function StatsRow(props) {
           $(this).addClass('numNeg');
         }
       });
+      for (var i = 0; i < props.price.lenght; i++) {
+        var total = 0;
+        total += props.stocks[i];
+        console.log(total);
+      }    
     },1000);
     return () => clearInterval(getColor); 
   },[]);

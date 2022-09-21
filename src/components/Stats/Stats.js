@@ -19,10 +19,8 @@ const Stats = () => {
       })
 
   }
-
   useEffect(() => {
     const intervalId = setInterval(() => {  
-      var totalStockPrice = 0;
       let tempStockData =[];
       const stocksList = ["AMZN", "PYPL", "ADBE", "AAPL", "BABA", "SHOP"];
 
@@ -42,11 +40,6 @@ const Stats = () => {
       Promise.all(promises).then(()=>{
           setStockData(tempStockData);
       })
-
-      tempStockData.map((stock) =>{
-        totalStockPrice += stock.price;
-      })
-
     },30000)
     return () => clearInterval(intervalId); //This is important
   },[]);
