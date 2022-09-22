@@ -46,3 +46,14 @@ body{
   height: auto;
   margin-top: 150px;
 }
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1px){
+  .body__container{
+    width: 100%;
+    margin-top: 300px;
+      flex-direction: column;
+  }
+}

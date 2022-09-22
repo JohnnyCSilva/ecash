@@ -84,6 +84,33 @@ font-size: 45px;
     flex-wrap: wrap;
   }
 
-/* POPULAR STOCKS LIST */
+/* RESPONSIVE */
+
+@media screen and (max-width:1450px){
+    .newsfeed__chart{
+        margin: 15px 25px;
+        margin-right: 10%;
+    }
+}
+@media screen and (max-width:1350px){
+    .newsfeed{
+        flex: 0.6;
+    }
+}
+@media screen and (max-width: 1024px){
+    .newsfeed{
+        flex: 0.5;
+    }
+    .newsfeed__chart{
+        margin: 15px 25px;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 932px){
+    .newsfeed{
+        flex: 0.4;
+    }
+}
+
 
 

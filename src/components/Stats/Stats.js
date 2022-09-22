@@ -4,6 +4,7 @@ import './stats.css'
 import StatsRow from './StatsRow';
 import { db } from '../Firebase/Firebase.js';
 
+
 const TOKEN = 'ccl2uk2ad3i7ei0c9m5gccl2uk2ad3i7ei0c9m60';
 const BASE_URL = 'https://finnhub.io/api/v1/quote';
 
