@@ -31,30 +31,59 @@ font-size: 45px;
     margin: 15px 25px;
     margin-right: 50%;
 }
+/* TIMELINE */
+.timeline__container{
+    display: flex;
+    margin-top: 30px;
+    
+}
+.timeline__buttons__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.timeline__button{
+    font-family: var(--font);
+    color: var(--textBeforeFocus);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-bottom: 1px solid var(--backgroundDark);
+}
+.timeline__button:hover{
+    color: var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+    box-shadow: inset 0px -10px 8px -10px var(--mainColor); 
+}
+.timeline__button.active{
+    color: var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+    box-shadow: inset 0px -10px 8px -10px var(--mainColor); 
+}
+/* POPULAR STOCKS */
+.newsfeed__popularlists__section {
+    height: fit-content;
+    margin: 50px 25px;
+  }
+  
+  .newsfeed__popularlists__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+  }
+  .newsfeed__popularlists__intro{
+    font-family: var(--font);
+    font-size: 15px;
+  }  
+  .newsfeed_popularlists_badges {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-@media screen and (max-width:1450px){
-    .newsfeed__chart{
-        margin: 15px 25px;
-        margin-right: 10%;
-    }
-}
-@media screen and (max-width:1280px){
-    .newsfeed{
-        flex: 0.6;
-    }
-}
-@media screen and (max-width:1024px){
-    .newsfeed{
-        flex: 0.5;
-    }
-}
-@media screen and (max-width:980px){
-    .newsfeed{
-        flex: 1;
-    }
+/* POPULAR STOCKS LIST */
 
-    .newsfeed__chart{
-        margin: 15px 25px;
-        margin-right: 0%;
-    }
-}
+

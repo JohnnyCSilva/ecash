@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './feed.css';
+import TimeLine from './TimeLine';
+
 
 import { LineChart, Line, Tooltip, XAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
-
 
 const Feed = () => {
 
@@ -20,10 +21,10 @@ const Feed = () => {
     }
     setgraphData(data);
   };
-
   useEffect(() => {
     createMockData();
   }, []);
+
 
   return (
     <div className='newsfeed'>

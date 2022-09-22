@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './stats.css';
+import './feed.css';
 import $ from "jquery";
 
 import stockRed1 from "./images/stockRed1.svg"
@@ -14,12 +14,12 @@ import stockGreen3 from "./images/stockGreen3.svg"
 import stockGreen4 from "./images/stockGreen4.svg"
 import stockGreen5 from "./images/stockGreen5.svg"
 
-function StatsRow(props) {
+function PopularStocks(props) {
 
 // (currentPrice - openPrice)/openPrice
   const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
 
-  
+  // Random graphImage from current
   var chartImage = 0;
   var randomImagePos = [stockGreen1, stockGreen2, stockGreen3, stockGreen4, stockGreen5];
   var randomImageNeg = [stockRed1, stockRed2, stockRed3, stockRed4, stockRed5];
@@ -32,15 +32,8 @@ function StatsRow(props) {
   } else {
     chartImage = chartImageNeg;
   }
-
-
-  for (var i = 0; i < (props.price).lenght; i++) {
-    var total = 0;
-    total += (props.price)[i];
-    console.log('total: '+ total);
-  }
-    
   
+  // color of % green or red
   useEffect(() => {
     const getColor = setInterval(() => {  
       $('.row__percentage').each(function() {
@@ -57,25 +50,53 @@ function StatsRow(props) {
     return () => clearInterval(getColor); 
   },[]);
 
-  const getModal = () => {
+  const buyBoxStock = () => {
 
   }
 
+  var star = 0;
+  function starClick(){
+    if (star === 0 ){
+        $('#stared').removeClass('pi-star').addClass('pi-star-fill color__starStarred');
+        $('#stared');
+        star = 1;
+    } else {
+        $('#stared').removeClass('pi-star-fill color__starStarred').addClass('pi-star');
+        star = 0;
+    }
+  }
+
   return (
-    <div className="row" onClick={getModal}>
-      <div className="row__intro">
+    <div className="row__fullStocks" onClick={buyBoxStock}>
+      <div className="favourite"> 
+        <i className="star pi pi-star" id='stared' onClick={starClick}/>
+      </div>
+      <div className="row__start">
         <h1>{props?.name}</h1>
-        <p>{props.shares && (props.shares + " shares")}</p>
+      </div>
+      <div className="row__price">
+        <p>{(props.price).toFixed(2)} <span>€</span></p>
+      </div>
+      <div className="percentage__1h">
+        <p className="row__percentage" id="row_percentage">{Number(percentage).toFixed(2)}%</p>
+      </div>
+      <div className="open__price">
+        <p>{(props.openPrice).toFixed(2)} €</p>
+      </div>  
+      <div className="close__price">
+        <p>{(props.closePrice).toFixed(2)} €</p>
+      </div> 
+      <div className="high__dayPrice">
+        <p>{(props.highPrice).toFixed(2)} €</p>
+      </div> 
+      <div className="low__dayPrice">
+        <p>{(props.lowPrice).toFixed(2)} €</p>
       </div>
       <div className="row__chart">
       <img src={chartImage} alt="" height={18}/>
-      </div>
-      <div className="row__numbers">
-        <p className="row__price">{(props.price).toFixed(2)} <span>€</span></p>
-        <p className="row__percentage" id="row_percentage">{Number(percentage).toFixed(2)}%</p>
       </div>
     </div>
   );
 }
 
-export default StatsRow;
+export default PopularStocks;

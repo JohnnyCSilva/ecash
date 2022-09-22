@@ -1,0 +1,33 @@
+.card{
+    overflow-x: hidden;
+}
+
+.dataTable__Stocks {
+    width: 100%;
+    color: var(--textBeforeFocus);
+    font-family: var(--font);
+    font-size: 15px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.row__name{
+    font-weight:bold;
+}
+
+.col_row{
+    padding: 15px 30px;
+    transition: 0.2s ease-in-out;   
+}
+.col_row:hover{
+    background-color: var(--backgroundDark);
+}
+
+.dataTable__row{
+    border: none;
+}
+
+.dataTable__row:hover{
+    background-color: var(--backgroundDark);
+    transition: 0.2s ease-in-out;
+    border: none;
+}

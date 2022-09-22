@@ -33,7 +33,7 @@ body{
   align-items: center;
   height: 100px;
 }
-.app__body{
+.app__header{
   width: 100%;
   height: auto;
   display: flex;
@@ -43,20 +43,6 @@ body{
   width: 90%;
   display: flex;
   justify-content: center;
-  height: 600px;
+  height: auto;
   margin-top: 150px;
-}
-
-@media screen and (max-width: 1024px) {
-  .body__container{
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .body__container{
-    margin-top: 300px;
-    flex-direction: column;
-    width: 100%;
-  }
 }
