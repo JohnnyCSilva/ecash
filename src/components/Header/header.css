@@ -1,9 +1,7 @@
 .header__wrapper{
-    position: fixed;
     width: 100%;
     align-items: center;
     height: 100px;
-    z-index: 10;
     background-color: var(--mainBgColor);
 }
 .header__container{
@@ -14,7 +12,7 @@
     vertical-align: middle;
     height: 100%;
     box-sizing: border-box;
-    width: 90%;
+    width: 70%;
     font-family: var(--font);
     color: var(--textBeforeFocus);
 }

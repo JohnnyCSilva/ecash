@@ -50,33 +50,34 @@ const PopularStocks = () => {
 
   return (
     <div>
-        <div className="datatable-doc-demo">
-              <div className="card">
+        <div className="dataTable__stocks">
                 <DataTable 
                   value={stockData} 
-                  rowClassName="dataTable__row"
-                  responsiveLayout="stack" breakpoint="960px"
-                  className="dataTable__Stocks" 
+                  rowClassName="table__row"
+                  responsiveLayout='scroll'
+                  className="table__stocks" 
                   selectionMode="checkbox"   
                   selection={selectedProducts8}
                   onSelectionChange={e => setSelectedProducts8(e.value)} 
+
+                  // Colocar Coluna com imagem do gráfico
+                  // Colocar Tabela centrada/ com 100% de with 
+                  // Colocar Icon do Stock em coluna antes do nome
+                  // Colocar coluna da percentagem e ir buscar a devida com caso seja negativa ou positiva -> Código na linha de baixo (não funciona)
+                        //<Column field={Number(stockData.percentage).toFixed(2) + "%"}"percentage{" header="Percentage" sortable></Column>
                   
-                  //<Column field={Number(stockData.percentage).toFixed(2) + "%"}"percentage{" header="Percentage" sortable></Column>
-                  //paginator 
-                  //paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown" rowsPerPageOptions={[10,25,50]}
                 >
-                  <Column className="col_row row__name" field="name"  header="Stock" sortable></Column>
-                  <Column className="col_row row__price" field="c" header="Price" sortable body={priceBodyTemplate}></Column>
+                  <Column className="col__row row__name" field="name"  header="Stock" sortable></Column>
+                  <Column className="col__row row__price" field="c" header="Price" sortable body={priceBodyTemplate}></Column>
                   
-                  <Column className="col_row row__oprice" field="o" header="Open Price" body={priceBodyTemplate}></Column>
-                  <Column className="col_row row__cprice" field="pc" header="Closed Price" body={priceBodyTemplate}></Column>
-                  <Column className="col_row row__hprice" field="h" header="Higher Price" body={priceBodyTemplate}></Column>
-                  <Column className="col_row row__lprice" field="l" header="Lower Price" body={priceBodyTemplate}></Column>
+                  <Column className="col__row row__oprice" field="o" header="Open Price" body={priceBodyTemplate}></Column>
+                  <Column className="col__row row__cprice" field="pc" header="Closed Price" body={priceBodyTemplate}></Column>
+                  <Column className="col__row row__hprice" field="h" header="Higher Price" body={priceBodyTemplate}></Column>
+                  <Column className="col__row row__lprice" field="l" header="Lower Price" body={priceBodyTemplate}></Column>
                   <Column selectionMode="multiple" style={{ padding: '15px 30px', }}></Column>
 
                 </DataTable>
-              </div>
-              </div>
+        </div>
     </div>
   )
 }

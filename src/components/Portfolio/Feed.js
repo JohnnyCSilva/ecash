@@ -36,7 +36,7 @@ const Feed = () => {
             </div>
             <div className='newsfeed__chart' id='newsfeed_chart'>
 
-            <ResponsiveContainer width='100%' height={150}>
+            <ResponsiveContainer width='100%' height={200}>
               <LineChart data={graphData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
                 <Line type="monotone" dataKey="y" stroke="var(--mainColor)" dot={false} />
                 <CartesianGrid stroke="var(--backgroundDark)" strokeDasharray="5 5" yAxis='1'/>

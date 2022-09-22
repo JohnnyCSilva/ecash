@@ -1,33 +1,44 @@
-.card{
-    overflow-x: hidden;
-}
-
-.dataTable__Stocks {
+.content__main{
     width: 100%;
-    color: var(--textBeforeFocus);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.content__content{
+    width: 70%;
+}
+.stocks__header>h1{
+    font-family: var(--font);
+    font-size: 40px;
+    color: var(--textWhiter);
+}
+.stocks__header>p{
     font-family: var(--font);
     font-size: 15px;
-    margin: 0 10px;
-    padding: 10px;
-}
-.row__name{
-    font-weight:bold;
+    color: var(--textWhite);
 }
 
-.col_row{
-    padding: 15px 30px;
-    transition: 0.2s ease-in-out;   
-}
-.col_row:hover{
+/* STOCKS DATATABLE */
+
+.dataTable__stocks{
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
     background-color: var(--backgroundDark);
+    box-shadow: var(--boxShadow );
+    border-radius: 5px;
+    margin: 50px 0;
 }
-
-.dataTable__row{
-    border: none;
+.table__stocks{
+    width: 100%;
+    color: var(--textWhiter);
+    font-family: var(--font);
+    font-size: 15px;
+    text-align: center;
 }
-
-.dataTable__row:hover{
-    background-color: var(--backgroundDark);
-    transition: 0.2s ease-in-out;
-    border: none;
+.col__row{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--mainBgColor);
 }

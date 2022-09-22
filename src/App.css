@@ -10,50 +10,29 @@
   --textBeforeFocus: #707070;
 
   --backgroundHover: #252525;
-  --backgroundDark: #151515;
+  --backgroundDark: #101010;
 
   --colorGreen : #39e75f;
   --colorRed: #e71f20;
 
   --font : 'Poppins', sans- serif;
 
+  --boxShadow : 0px 0px 10px rgba(10,10,10, 1);
+  --boxShadowHover : 0px 0px 10px rgba(50,50,50, 0.7);
+
 }
 
 *{
   margin:0;
   padding: 0;
+  border-spacing: 0;
 }
 
 body{
   background-color: var(--mainBgColor);
 }
 .header{
-  position: fixed;
   width: 100%;
   align-items: center;
   height: 100px;
-}
-.app__header{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
-.body__container{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  margin-top: 150px;
-}
-
-
-/* RESPONSIVE */
-
-@media screen and (max-width: 1px){
-  .body__container{
-    width: 100%;
-    margin-top: 300px;
-      flex-direction: column;
-  }
 }

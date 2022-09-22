@@ -1,0 +1,142 @@
+.trending__main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.trending__content{
+    width: 70%;
+}
+.trending__header>h1{
+    font-family: var(--font);
+    font-size: 40px;
+    color: var(--textWhiter);
+}
+.trending__header>p{
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--textWhite);
+}
+
+/* TRENDING BLOCK */
+
+.trending__blocks{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.block__main{
+    width: 29%;
+    padding: 15px 20px;
+    background-color: var(--backgroundDark);
+    box-shadow: var(--boxShadow );
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.block__main:hover{
+    box-shadow: var(--boxShadowHover);
+}
+.block__header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: var(--textWhiter);
+}
+.block__header>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.block__title{
+    width: calc(90% - 40px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    padding-left: 15px;
+}
+.block__title>p{
+    font-size: 13px;
+}
+.block__title>h2{
+    font-size: 20px;
+}
+.block__header>i{
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.block__header>i:hover{
+    text-shadow: 0px 0px 10px var(--mainColor);
+    color: var(--mainColor);
+}
+.block__info{
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: var(--textWhiter);
+}
+.block__info>img{
+    width: 100%;
+    margin-right: 60px;
+}
+.block__price{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    padding-left: 15px;
+}
+
+/* PERCENTAGE COLOR ADD/REMOVE CLASS */
+
+.numNeg{
+    color: var(--colorRed);
+}
+.numPos{
+    color: var(--colorGreen);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1400px) {
+    .trending__blocks{
+        margin: 10px 0;
+    }
+    .block__main{
+        margin: 10px 0;
+        width: 27%;
+    }
+    .block__info>img{
+        width: 100%;
+        margin: 0;
+    }
+
+    .block__price{
+        width: 100%;
+        text-align: right;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .trending__content{
+        width: 70%;
+    }
+    .trending__blocks{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .block__main{
+        margin: 10px 0;
+        width: calc(100% - 40px);
+    }
+    .block__info>img{
+        width: 70%;
+    }
+}
+
+
+
+
+

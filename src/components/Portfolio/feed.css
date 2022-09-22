@@ -1,17 +1,14 @@
 .newsfeed{
-    flex: 0.7;
+    flex: 0.6;
     color: var(--textWhiter)
 }
-
 .newsfeed__portfolioValue>h1, .newsfeed__portfolioValue>p{
     margin: 0;
     font-family: var(--font);
 }
-
 .newsfeed__portfolioValue{
     padding: 15px 25px;
 }
-
 .newsfeed__portfolioValue>h1{
 letter-spacing: 1px;
 font-size: 45px;
@@ -29,8 +26,8 @@ font-size: 45px;
 }
 .newsfeed__chart{
     margin: 15px 25px;
-    margin-right: 50%;
 }
+
 /* TIMELINE */
 .timeline__container{
     display: flex;
@@ -64,25 +61,7 @@ font-size: 45px;
     box-shadow: inset 0px -10px 8px -10px var(--mainColor); 
 }
 /* POPULAR STOCKS */
-.newsfeed__popularlists__section {
-    height: fit-content;
-    margin: 50px 25px;
-  }
-  
-  .newsfeed__popularlists__intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px 20px 0px;
-  }
-  .newsfeed__popularlists__intro{
-    font-family: var(--font);
-    font-size: 15px;
-  }  
-  .newsfeed_popularlists_badges {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
 
 /* RESPONSIVE */
 
