@@ -4,7 +4,6 @@
     text-align: center;
     color: var(--textWhite);
 }
-
 .stats__container{
     flex-direction: column;
     flex:1;
@@ -13,7 +12,6 @@
     margin: 10px;
     border-radius: 5px;
 }
-
 .stats__header{
     display: flex;
     justify-content: space-between;
@@ -24,25 +22,20 @@
     font-family: var(--font);
     color: var(--textBeforeFocus); 
 }
-
 .stats__header>i, .stats__header>p{
     font-size: 15px;
     vertical-align: middle;
     transition: 0.2s ease-in-out;
 }
-
 #stats_row{
     transition: 0.2s ease-in-out;
 }
-
 .stats__header>i:hover {
     text-shadow: 0px 0px 10px var(--mainColor);
     color: var(--mainColor);
     cursor: pointer;
 }
-
 /* STATS ROW */
-
 .row{
     display: flex;
     align-items: center;
@@ -54,11 +47,9 @@
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
-
 .row:hover{
     background-color: var(--backgroundHover);
 }
-
 .row__intro>h1{
     font-size: 14px;
     font-family: var(--font);
@@ -69,7 +60,6 @@
 .row__price>span{
     font-size: 12px;
 }
-
 .row__numbers{
     font-family: var(--font);
     font-size: 13px;
@@ -78,23 +68,50 @@
     font-size: 12px;
     text-align: right;
 }
-
 .row__intro{
     font-family: var(--font);
     font-size: 13px;
     text-align: left;
 }
-
 .numNeg{
     color: var(--colorRed);
 }
-
 .numPos{
     color: var(--colorGreen);
 }
-
 .chart__img{
     height: 20px;
     width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1350px){
+    .stats{
+        flex: 0.4;
+    }
+}
+@media screen and (max-width: 1024px){
+    .stats{
+        flex: 0.5;
+    }
+    .row__chart{
+        display: block;
+    }
+}
+@media screen and (max-width: 932px){
+    .stats{
+        flex: 0.7;
+    }
+
+}
+@media screen and (max-width:468px){
+    .stats{
+        flex: 1;
+    }
+    .stats__header{
+        padding: 15px 10px;
+        margin: 10px;
+    }
 }
 
