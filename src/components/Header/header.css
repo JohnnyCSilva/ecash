@@ -96,6 +96,9 @@
     align-items: center;
     vertical-align: middle;
 }
+
+/* MOBILE MENU */
+
 .mobile__menu{
   height: 100%;
   width: 0;
@@ -163,7 +166,8 @@
     width: auto;
     display: flex;
     justify-content: center;
-    background-color: transparent;;
+    align-items: center;
+    background-color: transparent;
     margin: 0 10%;
     border-radius: 50px;
     padding: 20px;
@@ -174,7 +178,8 @@
     text-shadow: 0px 0px 10px var(--mainColor);
     color: var(--mainColor);
 }
-.search__midContainer>input{    text-align: center;
+.search__midContainer>input{    
+    text-align: center;
     width: 0px;
     border: none;
     background-color: transparent;

@@ -65,6 +65,7 @@ const PopularStocks = () => {
                   // Colocar Icon do Stock em coluna antes do nome
                   // Colocar coluna da percentagem e ir buscar a devida com caso seja negativa ou positiva -> Código na linha de baixo (não funciona)
                         //<Column field={Number(stockData.percentage).toFixed(2) + "%"}"percentage{" header="Percentage" sortable></Column>
+                  // neste momento a tabela não é responsiva e está a queimar a app toda em mobile      
                   
                 >
                   <Column className="col__row row__name" field="name"  header="Stock" sortable></Column>

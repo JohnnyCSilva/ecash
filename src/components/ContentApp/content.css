@@ -42,3 +42,13 @@
     text-align: center;
     border-bottom: 1px solid var(--mainBgColor);
 }
+
+/* RESPONSIVE */
+
+/* remove a tabela em mobile */
+
+@media only screen and (max-width: 767px) {
+    .dataTable__stocks{
+        display: none;
+    }
+}
