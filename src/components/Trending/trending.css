@@ -26,6 +26,9 @@
     display: flex;
     justify-content: space-between;
 }
+.block__main:nth-child(4){
+    display: none;
+}
 .block__main{
     width: 29%;
     padding: 15px 20px;
@@ -119,20 +122,100 @@
         text-align: right;
     }
 }
-@media only screen and (max-width: 1024px) {
+@media screen and (min-width:1024px) and (max-width:1400px) {
     .trending__content{
-        width: 80%;
+        width: 90%;
     }
     .trending__blocks{
+        flex-direction: row;
+        margin: 10px 0;
+    }
+    .block__main{
+        margin: 10px 0;
+        width: 19%;
+    }
+    .block__main:nth-child(4){
+        display: block;
+    }
+
+    .block__header>img{
+        width: 30px;
+        height: 30px;
+    }
+    .block__info>img{
+        display: none;
+    }
+    .block__info{
+        flex-direction: column;
+        margin: 20px 0px 10px 0px;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        color: var(--textWhiter);
+    }
+    .block__price{
+        text-align: left;
+    }
+}
+@media screen and (min-width:840px) and (max-width:1023px){
+    .block__header>img{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .block__header>i{
+        display: none;
+    }
+    .block__header{
+        display: block;
+    }
+    .block__title{
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font);
+        padding-left: 10px;
+        margin-top: 15px;
+    }
+}
+@media screen and (min-width:770px) and (max-width:839px) {
+    .block__main:nth-child(4){
+        display: none;
+    }
+    .block__main{
+        margin: 10px 0;
+        width: 26%;
+    }
+    .trending__content{
+        width: 100%;
+        margin: 0 20px 0px 50px;
+    }
+    .block__info>img{
+        display: none;
+    }
+}
+@media only screen and (max-width: 769px) {
+    .trending__content{
+        width: 90%;
+    }
+    .trending__blocks{
+        display: flex;
         flex-direction: column;
         margin: 10px 0;
     }
     .block__main{
         margin: 10px 0;
-        width: calc(100% - 40px);
+        width: 100%;
     }
-    .block__info>img{
-        width: 70%;
+    .block__header{
+        display: flex;
+    }
+    .trending__content{
+        width: 100%;
+        margin: 0px 80px 0px 60px;
+    }
+    .block__main:nth-child(4){
+        display: block;
     }
 }
 

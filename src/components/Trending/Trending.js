@@ -17,7 +17,7 @@ const Trending = () => {
       useEffect(() => {
         //const intervalId = setInterval(() => {  
           let tempStockData =[];
-          const stocksList = ["AAPL", "PYPL", "ADBE"];
+          const stocksList = ["AAPL", "PYPL", "ADBE", "MSFT"];
           let promises = [];
     
           stocksList.map((stock) => {

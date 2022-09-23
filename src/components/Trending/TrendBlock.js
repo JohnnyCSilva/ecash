@@ -3,6 +3,7 @@ import './trending.css'
 import Apple from './Images/apple.jpg'
 import Paypal from './Images/paypal.png'
 import Adobe from './Images/adobe.png'
+import Microsoft from './Images/microsoft.png'
 import $ from "jquery";
 
 import stockRed1 from "./Images/stockRed1.svg"
@@ -42,9 +43,12 @@ const TrendBlock = (props) => {
     } else if( props.name === "ADBE" ){
         stockName = "Adobe";
         stockImage = Adobe
-    } else {
+    } else if( props.name === "PYPL" ){
         stockName = "Paypal";
         stockImage = Paypal
+    } else {
+        stockName = "Microsoft";
+        stockImage = Microsoft
     }
 
     useEffect(() => {
