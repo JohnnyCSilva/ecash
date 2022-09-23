@@ -6,7 +6,7 @@
     margin-top: 50px;
 }
 .trending__content{
-    width: 70%;
+    width: 90%;
 }
 .trending__header>h1{
     font-family: var(--font);
@@ -121,7 +121,7 @@
 }
 @media only screen and (max-width: 1024px) {
     .trending__content{
-        width: 70%;
+        width: 80%;
     }
     .trending__blocks{
         flex-direction: column;

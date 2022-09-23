@@ -68,7 +68,7 @@ const PopularStocks = () => {
                   // neste momento a tabela não é responsiva e está a queimar a app toda em mobile      
                   
                 >
-                  <Column className="col__row row__name" field="name"  header="Stock" sortable></Column>
+                  <Column className="col__row row__name" field="name"  header="Stock" sortable><p> teste </p></Column>
                   <Column className="col__row row__price" field="c" header="Price" sortable body={priceBodyTemplate}></Column>
                   
                   <Column className="col__row row__oprice" field="o" header="Open Price" body={priceBodyTemplate}></Column>

@@ -31,8 +31,61 @@
 body{
   background-color: var(--mainBgColor);
 }
+.App{
+  display: flex;
+  grid-template-columns: 1fr 10fr;
+}
+
+.MobileNav{
+  position: fixed;
+  z-index: 10;
+  bottom: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px auto;
+  display: none;
+}
+
+.navBar{
+  width: 250px;
+  position: fixed;
+  transition: 0.2s ease-in-out;
+}
+
+.full_content{
+  margin-left: 250px;
+  width: 100%;
+}
+
 .header{
   width: 100%;
   align-items: center;
   height: 100px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1024px) {
+  .navBar{
+    position: fixed;
+    width: 100px;
+  }
+  .full_content{
+    margin-left: 115px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 504px) {
+  .navBar{
+    display: none;
+  }
+  .full_content{
+    margin-left: 0px;
+    width: 100%;
+  }
+  .MobileNav{
+    display: block;
+  }
 }

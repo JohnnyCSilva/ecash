@@ -6,7 +6,7 @@
     margin-top: 50px;
 }
 .content__content{
-    width: 70%;
+    width: 90%;
 }
 .stocks__header>h1{
     font-family: var(--font);
@@ -47,6 +47,11 @@
 
 /* remove a tabela em mobile */
 
+@media only screen and (max-width: 1024px) {
+    .content__content{
+        width: 90%;
+    }
+}
 @media only screen and (max-width: 767px) {
     .dataTable__stocks{
         display: none;

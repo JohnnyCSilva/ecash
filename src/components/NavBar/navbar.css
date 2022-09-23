@@ -1,0 +1,115 @@
+
+.Navbar__content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    background-color: var(--backgroundDark);
+}
+.Navbar__brand{
+    margin: 10px;
+}
+.logo__desktop{
+    width: 180px;
+}
+.logo__mobile{
+    display: none;
+}
+.Navbar__menu{
+    width: 100%;
+    margin: 20px 10px;
+}
+.Navbar__menu-list{
+    list-style: none;
+    margin-right: 30px;
+}
+.Navbar__menu-list>a{
+    font-family: var(--font);
+    text-decoration: none;
+    color: var(--textWhiter);
+    
+}
+.Navbar__menu-item{
+    margin: 15px 0;
+    padding: 20px 30px;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+    
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+    vertical-align: middle;
+}
+.Navbar__menu-item>span{
+    font-size: 15px;
+}
+
+.Navbar__menu-item>i{
+    margin-right: 10px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 1024px) {
+    .Navbar__menu-item:hover{
+        background-color: var(--backgroundHover);
+        text-shadow: 0px 0px 10px var(--mainColor);
+        color: var(--mainColor);
+        border-left: 2px solid var(--mainColor);
+    }
+    .search{
+        display: none;
+    }
+    .active{
+        text-shadow: 0px 0px 20px var(--mainColor);
+        border-left: 2px solid var(--mainColor);
+        color: var(--mainColor);
+        box-shadow: inset var(--boxShadowHover);
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .Navbar__menu-item>span{
+        display:none;
+    }
+    .Navbar__menu-item{
+        padding: 0px;
+    }
+    .Navbar__menu-list>a{
+        font-size: 20px;
+    }
+    .active>i{
+        color: var(--mainColor);
+        text-shadow: 0px 0px 10px var(--mainColor);
+        border-left: 2px solid var(--mainColor);
+    }
+    .Navbar__menu-item>i{
+        border-radius: 10px;
+        box-shadow: inset var(--boxShadowHover);
+        border-left: 1px solid transparent;
+        padding: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .Navbar__menu-item>i:hover{
+        background-color: var(--backgroundHover);
+        box-shadow: var(--boxShadowHover);
+        text-shadow: 0px 0px 10px var(--mainColor);
+        color: var(--mainColor);
+        border-left: 2px solid var(--mainColor);
+    }
+    .Navbar__menu-item>i:hover{
+        background-color: var(--backgroundHover);
+        box-shadow: var(--boxShadowHover);
+        text-shadow: 0px 0px 10px var(--mainColor);
+        color: var(--mainColor);
+    }
+    .logo__desktop{
+        display: none;
+    }
+    .logo__mobile{
+        display: block;
+        width: 60px;
+    }   
+}
